@@ -16,19 +16,20 @@ let oneEuroIs = {
 
 const fromDollarToYen =(valor)=>{
     let cambioAEuro = valor /oneEuroIs.USD
-    return Number(cambioAEuro * oneEuroIs.JPY).toFixed(2)
+    return Number((cambioAEuro * oneEuroIs.JPY).toFixed(2))
 
 }
-console.log(fromDollarToYen(1))
 
 const fromYenToPound =(valor)=>{
     let cambioAEuro = valor /oneEuroIs.JPY
-    return Number(cambioAEuro * oneEuroIs.GBP).toFixed(2)
-
+    return Number((cambioAEuro * oneEuroIs.GBP).toFixed(2))
+    
 }
 
 function fromEuroToDollar (valor){
     return valor*oneEuroIs.USD
 }
 
+console.log(fromDollarToYen(1))
+console.log(fromYenToPound(1))
 module.exports = {sum,fromEuroToDollar,fromDollarToYen,fromYenToPound}
